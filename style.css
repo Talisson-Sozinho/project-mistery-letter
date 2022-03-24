@@ -49,5 +49,5 @@
 }
 
 .rotateright {
-  transform: skewX(10deg);
+  transform: rotate(5deg);
 }
