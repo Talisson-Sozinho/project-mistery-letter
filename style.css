@@ -55,3 +55,7 @@
 .skewleft {
   transform: skewX(10deg);
 }
+
+.skewright {
+  transform: skewX(-10deg);
+}
