@@ -7,3 +7,9 @@
 #criar-carta {
   padding: 2em;
 }
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: '"Times New Roman"', Times, serif;
+  font-weight: 700;
+}
