@@ -1,6 +1,7 @@
 const cartaGerada = document.getElementById('carta-gerada');
 const inputPhrase = document.getElementById('carta-texto');
 const createLetterButton = document.getElementById('criar-carta');
+const counterElement = document.getElementById('carta-contador');
 
 function arrayRandomClass() {
   const stylesForRandomizer = [
@@ -24,6 +25,7 @@ function generatePhrase(phrase) {
     span.innerText = phrase[index];
     span.className = arrayRandomClass();
     cartaGerada.appendChild(span);
+    counterElement.innerText = index + 1;
   }
 }
 
