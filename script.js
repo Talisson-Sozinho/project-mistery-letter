@@ -12,7 +12,6 @@ function arrayRandomClass() {
   const stringClassName = [];
   for (let index = 0; index < stylesForRandomizer.length; index += 1) {
     const randomPosition = Math.round(Math.random() * (stylesForRandomizer[index].length - 1));
-    console.log(randomPosition);
     stringClassName.push(stylesForRandomizer[index][randomPosition]);
   }
   return stringClassName.join(' ');
@@ -34,5 +33,12 @@ createLetterButton.addEventListener('click', () => {
     cartaGerada.innerText = 'por favor, digite o conteúdo da carta.';
   } else {
     generatePhrase(phrase);
+  }
+});
+
+cartaGerada.addEventListener('click', (event) => {
+  const span = event.target;
+  if (span.tagName === 'SPAN') {
+    span.className = arrayRandomClass();
   }
 });
