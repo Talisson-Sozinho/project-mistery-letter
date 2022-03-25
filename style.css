@@ -4,8 +4,69 @@
   padding: 0;
 }
 
+body {
+  background-image: url('https://c.pxhere.com/photos/1b/90/starry_night_starry_sky_silhouette_night_sky_starry_star_night_sky-824458.jpg!d');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input-container {
+  display: block;
+  text-align: center;
+  height: 80vh;
+  width: 70vw;
+  margin: 3.5em auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 60px;
+  padding-top: 2em;
+  box-shadow: 0 0 5em black;
+}
+
+.input-container h1 {
+  color: rgb(183, 112, 90);
+  font-size: 2.75em;
+}
+
+#carta-texto {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 1.75em;
+  border-radius: 5em;
+  border: 0;
+  width: 30em;
+}
+
 #criar-carta {
-  padding: 2em;
+  display: inline-block;
+  align-items: center;
+  margin-left: 1.5em;
+  margin-top: 2em;
+  height: 2em;
+  width: 9em;
+  border-radius: 0.75em;
+  border: 0;
+  background-color: lightgreen;
+}
+
+#criar-carta:hover {
+  filter: brightness(0.85);
+}
+
+.count-container {
+  padding: 1.75em;
+  color: rgb(20, 33, 32);
+  font-size: 2em;
+}
+
+.count-container p {
+  display: inline;
+}
+
+#carta-gerada {
+  display: block;
+  margin-top: 1em;
 }
 
 .newspaper {

@@ -4,16 +4,16 @@ const createLetterButton = document.getElementById('criar-carta');
 const counterElement = document.getElementById('carta-contador');
 
 function arrayRandomClass() {
-  const stylesForRandomizer = [
+  const stylesForRandomize = [
     ['newspaper', 'magazine1', 'magazine2'],
     ['medium', 'big', 'reallybig'],
     ['rotateleft', 'rotateright'],
     ['skewleft', 'skewright'],
   ];
   const stringClassName = [];
-  for (let index = 0; index < stylesForRandomizer.length; index += 1) {
-    const randomPosition = Math.round(Math.random() * (stylesForRandomizer[index].length - 1));
-    stringClassName.push(stylesForRandomizer[index][randomPosition]);
+  for (let index = 0; index < stylesForRandomize.length; index += 1) {
+    const randomPosition = Math.round(Math.random() * (stylesForRandomize[index].length - 1));
+    stringClassName.push(stylesForRandomize[index][randomPosition]);
   }
   return stringClassName.join(' ');
 }
@@ -29,18 +29,21 @@ function generatePhrase(phrase) {
   }
 }
 
-createLetterButton.addEventListener('click', () => {
+function generateLetter() {
   const phrase = inputPhrase.value.split(' ');
   if (phrase.length === inputPhrase.value.length + 1) {
     cartaGerada.innerText = 'por favor, digite o conteúdo da carta.';
   } else {
     generatePhrase(phrase);
   }
-});
+}
 
-cartaGerada.addEventListener('click', (event) => {
+function randomizeWord(event) {
   const span = event.target;
   if (span.tagName === 'SPAN') {
     span.className = arrayRandomClass();
   }
-});
+}
+
+createLetterButton.addEventListener('click', generateLetter);
+cartaGerada.addEventListener('click', randomizeWord);
